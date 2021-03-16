@@ -84,7 +84,7 @@ class CategoryViewController: SwipeTableViewController {
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
         
         var textField = UITextField()
-        let alert = UIAlertController(title: "Add a New Cateogry", message: "", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Add a New Category", message: "", preferredStyle: .alert)
         let action = UIAlertAction(title: "Add", style: .default) { (action) in
             let newCategory = Category()
             newCategory.name = textField.text!
