@@ -133,6 +133,7 @@ class TodoListViewController: SwipeTableViewController {
 extension TodoListViewController: UISearchBarDelegate{
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        toDoItems = selectedCategory?.items.sorted(byKeyPath: "title", ascending: true)
         toDoItems = toDoItems?.filter("title CONTAINS[cd] %@", searchBar.text!).sorted(byKeyPath: "title", ascending: true)
         tableView.reloadData()
     }
